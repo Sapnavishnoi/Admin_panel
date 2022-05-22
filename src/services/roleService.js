@@ -1,5 +1,6 @@
 import { Client } from "./_clientService";
 import { signOut } from "./authService";
+import { timelineConnectorClasses } from "@mui/lab";
 
 async function getKids(){
     const result = await new Client({ path: `/api/all/kids` }).get();
@@ -67,37 +68,53 @@ async function addRole({  name, dateOfBirth}) {
     return result;
   }
  
-  async function addTagline({  name, dateOfBirth}) {
+  async function addTagline({  title, tagLine}) {
     const result = await new Client({
-      path: "/api/add/kid",
-      payload: { user_id: "626d3f2ada7760f0a736b4ce", dateOfBirth: dateOfBirth.trim(),  name: name.trim() },
+      path: "/api/create/home",
+      payload: { title: title.trim(),  tagLine: tagLine.trim() },
     }).post();
   
     return result;
   }
 
-  async function addSlot({  name, dateOfBirth}) {
+  async function addSlot({planId, timing, totalSlot, amount, month, slotName}) {
     const result = await new Client({
-      path: "/api/add/kid",
-      payload: { user_id: "626d3f2ada7760f0a736b4ce", dateOfBirth: dateOfBirth.trim(),  name: name.trim() },
+      path: "/api/create/slot",
+      payload: {
+        slotName: slotName.trim(),
+      planId: planId.trim(),      
+      timing: timing.trim(),
+      totalSlot:totalSlot.trim(),
+      amount: amount.trim(),
+      month: month.trim() },
     }).post();
   
     return result;
   }
  
-  async function addPlan({  name, dateOfBirth}) {
+  async function addPlan({ month, plan_name, days}) {
     const result = await new Client({
-      path: "/api/add/kid",
-      payload: { user_id: "626d3f2ada7760f0a736b4ce", dateOfBirth: dateOfBirth.trim(),  name: name.trim() },
+      path: "/api/add/pacakage",
+      payload: {month: month.trim(),  plan_name: plan_name.trim(), days: days.trim() },
     }).post();
   
     return result;
   }
 
-  async function addRole({  name, dateOfBirth}) {
+  async function addCoach({ profile, name, rating, bio}) {
     const result = await new Client({
-      path: "/api/add/kid",
-      payload: { user_id: "626d3f2ada7760f0a736b4ce", dateOfBirth: dateOfBirth.trim(),  name: name.trim() },
+      path: "/api/add/coach",
+      payload: { profile: profile.trim(),  name: name.trim(), rating: rating.trim(), bio:bio.trim() },
+    }).post();
+  
+    return result;
+  }
+
+  async function addLocation({ addressLine1, addressLine2, city, country, pincode, lat, long}) {
+    const result = await new Client({
+      path: "/api/create/location",
+      payload: { addressLine1: addressLine1.trim(),  addressLine2: addressLine2.trim(), city: city.trim(), country: country.trim()
+      ,pincode: pincode.trim(), lat:lat.trim(), long:long.trim() },
     }).post();
   
     return result;
@@ -116,5 +133,11 @@ export{
     getCoach,
     getBooking,
     addRole,
-    deActivateRoleId
+    deActivateRoleId,
+    addTagline,
+    addSlot,
+    addPlan,
+    addCoach,
+    addLocation
+
 }

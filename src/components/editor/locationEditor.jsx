@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import ContentShell from "../ContentShell";
 import FormTextInput from "../FormTextInput";
 import configData from "../../config/config.json";
-import { addPlatform } from "../../services/platformService";
+import { addLocation } from "../../services/roleService";
 import { useSnackbar } from "../../hooks/useSnackbar";
 
 
@@ -61,7 +61,7 @@ const LocationEditor = () => {
 
   async function submitForm(values) {
     try{
-        await addPlatform(values);
+        await addLocation(values);
         showSnackbar("added successful", "success");
         
     } catch(e) {

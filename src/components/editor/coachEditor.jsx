@@ -8,8 +8,9 @@ import Button from "@mui/material/Button";
 import ContentShell from "../ContentShell";
 import FormTextInput from "../FormTextInput";
 import configData from "../../config/config.json";
-import { addPlatform } from "../../services/platformService";
+// import { addPlatform } from "../../services/platformService";
 import { useSnackbar } from "../../hooks/useSnackbar";
+import { addCoach } from "../../services/roleService";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +54,7 @@ const CoachEditor = () => {
 
   async function submitForm(values) {
     try{
-        await addPlatform(values);
+        await addCoach(values);
         showSnackbar("added successful", "success");
         
     } catch(e) {

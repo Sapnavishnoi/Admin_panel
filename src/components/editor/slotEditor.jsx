@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import ContentShell from "../ContentShell";
 import FormTextInput from "../FormTextInput";
 import configData from "../../config/config.json";
-import { addPlatform } from "../../services/platformService";
+import { addSlot } from "../../services/roleService";
 import { useSnackbar } from "../../hooks/useSnackbar";
 
 
@@ -66,7 +66,7 @@ const SlotEditor = () => {
 
   async function submitForm(values) {
     try{
-        await addPlatform(values);
+        await addSlot(values);
         showSnackbar("added successful", "success");
         
     } catch(e) {
