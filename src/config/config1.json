@@ -1,0 +1,131 @@
+{
+  "routes": {
+    "signIn": "/signin",
+    "home": "/*",
+    "reports": {
+      "dailySummary": "/daily-summary"
+    },
+    "api":{
+      "addApi":"/api/add",
+      "apiShell": "/api"
+    },  
+    "platform":"/platform",
+    "addPlatform":"/platform/add",
+    "role": {
+      "home": "/role",
+      "addRole": "/role/add",
+      "editRole": "/role/edit"
+    },
+    "user": {
+      "home": "/user",
+      "addUser": "/user/add",
+      "editUser": "/user/edit",
+      "editUserAccess": "/user/editAccess"
+    },
+    "operator": {
+      "home": "/operator",
+      "addOperator": "/operator/add"
+    },
+    "brand": {
+      "home": "/brand",
+      "addBrand": "/brand/add"
+    }
+  },
+
+  "otherURLS": {
+    "updateRole": "/api/api-mgmt/roles",
+    "updateUser": "/api/user-mgmt/user",
+    "allowedLinks": "/api/user/allowed-links",
+    "activePlatForms": "/api/platform-mgmt/active-all",
+    "activeOperators": "/api/operator-mgmt/active-all",
+    "activeBrands": "/api/brand-mgmt/active-all"
+  },
+
+  "sideBarLinks": {
+    "reports": {
+      "title": "Reports",
+      "menu": [
+        {
+          "title": "Daily Summary",
+          "url": "/daily-summary",
+          "serverURL": "/api/bo/day-wise-summary"
+        }
+      ]
+    },
+    "role": {
+      "title": "Roles",
+      "menu": [
+        {
+          "title": "Roles",
+          "url": "/role",
+          "serverURL": "/api/role-mgmt/all"
+        },
+        {
+          "title": "Add roles",
+          "url": "/role/add",
+          "serverURL": "/api/role-mgmt/add"
+        }
+      ]
+    },
+    "platform": {
+      "title": "Platforms",
+      "menu": [
+        {
+          "title": "Platforms",
+          "url": "/platform",
+          "serverURL": "/api/platform-mgmt/all"
+        },
+        {
+          "title": "Add Platform",
+          "url": "/platform/add",
+          "serverURL": "/api/platform-mgmt/add"
+        }
+      ]
+    },
+    "operator": {
+      "title": "Operators",
+      "menu": [
+        {
+          "title": "Operators",
+          "url": "/operator",
+          "serverURL": "/api/operator-mgmt/all"
+        },
+        {
+          "title": "Add Operators",
+          "url": "/operator/add",
+          "serverURL": "/api/operator-mgmt/add"
+        }
+      ]
+    },
+    "brand": {
+      "title": "Brands",
+      "menu": [
+        {
+          "title": "Brands",
+          "url": "/brand",
+          "serverURL": "/api/brand-mgmt/all"
+        },
+        {
+          "title": "Add Brands",
+          "url": "/brand/add",
+          "serverURL": "/api/brand-mgmt/add"
+        }
+      ]
+    },
+    "user": {
+      "title": "Users",
+      "menu": [
+        {
+          "title": "Users",
+          "url": "/user",
+          "serverURL": "/api/get/user"
+        },
+        {
+          "title": "Add users",
+          "url": "/user/add",
+          "serverURL": "/api/auth/register"
+        }
+      ]
+    }
+  }
+}

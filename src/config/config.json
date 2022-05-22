@@ -1,0 +1,192 @@
+{
+    "routes": {
+      "signIn": "/signin",
+      "home": "/*",
+      "reports": {
+        "dailySummary": "/daily-summary"
+      },
+      "api":{
+        "addApi":"/api/add",
+        "apiShell": "/api"
+      },  
+      "platform":"/platform",
+      "addPlatform":"/platform/add",
+      "role": {
+        "home": "/kidsDetail",
+        "addRole": "/kid/add",
+        "editRole": "/role/edit"
+      },
+      "user": {
+        "home": "/user",
+        "addUser": "/user/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "location": {
+        "home": "/location",
+        "addLocation": "/location/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "tagline": {
+        "home": "/tagline",
+        "addTagline": "/tagline/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "slot": {
+        "home": "/slot",
+        "addSlot": "/slot/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "plan": {
+        "home": "/plan",
+        "addPlan": "/plan/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "coach": {
+        "home": "/coach",
+        "addCoach": "/coach/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "booking": {
+        "home": "/booking",
+        "addUser": "/user/add",
+        "editUser": "/user/edit",
+        "editUserAccess": "/user/editAccess"
+      },
+      "operator": {
+        "home": "/operator",
+        "addOperator": "/operator/add"
+      },
+      "brand": {
+        "home": "/brand",
+        "addBrand": "/brand/add"
+      }
+    },
+  
+   
+    "sideBarLinks": {     
+      "user": {
+        "title": "Users",
+        "menu": [
+          {
+            "title": "Users",
+            "url": "/user",
+            "serverURL": "/api/get/user"
+          },
+          {
+            "title": "Add users",
+            "url": "/user/add",
+            "serverURL": "/api/auth/register"
+          }
+        ]
+      },
+
+      "kid": {
+        "title": "Kids",
+        "menu": [
+          {
+            "title": "Kids",
+            "url": "/kidsDetail",
+            "serverURL": "/api/all/kids"
+          },
+          {
+            "title": "Add kid",
+            "url": "/kid/add",
+            "serverURL": "/api/add/kid"
+          }
+        ]
+      },
+      "location":{
+        "title": "Location",
+        "menu": [
+          {
+            "title": "Location",
+            "url": "/location",
+            "serverURL": "/api/location"
+          },
+          {
+            "title": "Add Location",
+            "url": "/location/add",
+            "serverURL": "/api/create/location"
+          }
+        ]
+      },
+      "tagline":{
+        "title": "Home Tagline",
+        "menu": [
+          {
+            "title": "Home tagline",
+            "url": "/tagline",
+            "serverURL": "/api/home"
+          },
+          {
+            "title": "Add Home Tagline",
+            "url": "/tagline/add",
+            "serverURL": "/api/create/home"
+          }
+        ]
+      },
+      "plan":{
+        "title": "Plan",
+        "menu": [
+          {
+            "title": "Plans",
+            "url": "/plan",
+            "serverURL": "/api/plan/details"
+          },
+          {
+            "title": "Add Plans",
+            "url": "/plan/add",
+            "serverURL": "/api/add/pacakage"
+          }
+        ]
+      },
+      "slot":{
+        "title": "Slots",
+        "menu": [
+          {
+            "title": "Slots",
+            "url": "/slot",
+            "serverURL": "/api/slot"
+          },
+          {
+            "title": "Add Slot",
+            "url": "/slot/add",
+            "serverURL": "/api/create/slot"
+          }
+        ]
+      },
+      "booking":{
+        "title": "Booking Details",
+        "menu": [
+          {
+            "title": "Booking Details",
+            "url": "/booking",
+            "serverURL": "/api/all/booking"
+          }
+        ]
+      },
+      "coach":{
+        "title": "Coach",
+        "menu": [
+          {
+            "title": "Coach",
+            "url": "/coach",
+            "serverURL": "/api/coach/detail"
+          },
+          {
+            "title": "Add Coach",
+            "url": "/coach/add",
+            "serverURL": "/api/add/coach"
+          }
+        ]
+
+      }
+    }
+  }
+  
